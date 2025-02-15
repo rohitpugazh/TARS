@@ -8,7 +8,7 @@ import whisper # Import the Whisper library
 class SpeechRecognizer:
     """Speech recognition class using the Whisper library."""
 
-    def __init__(self, model_size='small'):
+    def __init__(self, model_size='turbo'):
         """Initialize the speech recognizer."""
         device = 'cuda' if torch.cuda.is_available() else 'cpu'
         print(f"Using device: {device}")
