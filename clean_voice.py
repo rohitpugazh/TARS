@@ -7,7 +7,7 @@ import soundfile as sf
 from pyannote.audio import Pipeline
 
 # Set your Hugging Face token here
-HF_TOKEN = "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"
+HF_TOKEN = "place here"
 
 # Step 1: Remove Background Music using Demucs
 def remove_bgm(input_audio):
