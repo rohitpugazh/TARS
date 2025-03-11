@@ -22,7 +22,7 @@ This project is a **TARS-inspired Conversational AI** that replicates the voice 
 ---
 
 ## **Tech Stack & Tools**  
-- **Python 3.13**  
+- **Python 3.12.9**  
 - **Torch, Transformers, Whisper, llama.cpp, TTS (XTTSv2)**  
 - **FFmpeg (for audio processing)**  
 - **GPU-accelerated LLaMA-based model (Mistral-7B)**  
@@ -38,8 +38,9 @@ cd TARS-Voice-Assistant
 ```
 
 ### **2. Install Dependencies**  
+Install all dependencies from the `requirements.txt` file:  
 ```bash
-pip install torch whisper llama-cpp-python TTS ffmpeg-python
+pip install -r requirements.txt
 ```
 
 ### **3. Configure System Paths**  
@@ -68,6 +69,15 @@ python main.py
 - **Change Whisper Model**: Modify `model_size="turbo"` in `SpeechRecognizer`.  
 - **Adjust AI Response Behavior**: Modify the `system` role in `ConversationalAI`.  
 - **Use a Different Voice**: Replace `reference.wav` with a new **voice reference** for XTTSv2.  
+
+---
+
+## **Resources & References**  
+- [OpenAI Whisper](https://github.com/openai/whisper) - Automatic Speech Recognition (ASR)  
+- [Mistral-7B (LLaMA-based)](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2) - Local Conversational AI Model  
+- [XTTSv2](https://github.com/coqui-ai/TTS) - Advanced Text-to-Speech Model  
+- [AllTalk Fine-Tuning Guide](https://github.com/coqui-ai/TTS) - Instructions for fine-tuning XTTSv2  
+- [Llama.cpp](https://github.com/ggerganov/llama.cpp) - Running LLaMA models efficiently on local hardware  
 
 ---
 
