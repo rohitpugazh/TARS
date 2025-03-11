@@ -65,6 +65,32 @@ python main.py
 
 ---
 
+## **File Structure**  
+```
+TARS-Voice-Assistant/
+|
+|-- LICENSE                 # License file
+|-- README.md               # Project documentation
+|-- requirements.txt        # Required dependencies
+|
+|-- main.py                 # Entry point for running the assistant
+|-- clean_voice.py          # Audio preprocessing and noise reduction
+|-- preprocess_wavs.py      # Audio preprocessing pipeline
+|-- trim_audio.py           # Trims audio files to desired length
+|
+|-- mistral/                # Mistral-7B conversational AI model
+|-- tts_model/              # XTTSv2-based text-to-speech model
+|
+|-- input.wav               # Example input speech file
+|-- output_speech.wav       # Output speech file after TTS processing
+|
+|-- mistral_test.py         # Test script for Mistral AI model
+|-- test_voice_cloning.py   # Test script for voice cloning
+|-- scraper.py              # Web scraping utility (if needed for datasets)
+```
+
+---
+
 ## **Customization**  
 - **Change Whisper Model**: Modify `model_size="turbo"` in `SpeechRecognizer`.  
 - **Adjust AI Response Behavior**: Modify the `system` role in `ConversationalAI`.  
@@ -92,3 +118,4 @@ python main.py
 MIT License - Feel free to use and modify!  
 
 ---
+
