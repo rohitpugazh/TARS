@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+
+# Virtual Environment
+venv/
+env/
+
+# Models and Audio
+models/*.gguf
+models/TARS/*
+!models/TARS/wavs/
+!models/TARS/wavs/.gitkeep
+*.wav
+*.mp3
+*.pth
+*.pt
+*.ckpt
+temp_audio.wav
+tts_output.wav
+reference.wav
+
+# Logs
+*.log 

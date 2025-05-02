@@ -1,0 +1,16 @@
+# Core dependencies
+torch>=2.1.0
+torchaudio>=2.1.0
+numpy>=1.24.0
+sounddevice>=0.4.6
+scipy>=1.11.0
+
+# TTS and Speech
+TTS>=0.21.0
+openai-whisper>=20231117
+
+# LLM
+llama-cpp-python>=0.2.0
+
+# Environment
+python-dotenv>=1.0.0 
