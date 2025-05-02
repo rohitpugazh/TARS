@@ -9,15 +9,18 @@ venv/
 env/
 
 # Models and Audio
-models/*.gguf
-models/TARS/*
-!models/TARS/wavs/
-!models/TARS/wavs/.gitkeep
+models/
+models/*
+!models/.gitkeep
 *.wav
 *.mp3
 *.pth
 *.pt
 *.ckpt
+*.gguf
+*.bin
+*.onnx
+*.safetensors
 temp_audio.wav
 tts_output.wav
 reference.wav

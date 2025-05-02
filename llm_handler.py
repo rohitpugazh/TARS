@@ -8,7 +8,7 @@ logging.getLogger("llama_cpp").setLevel(logging.ERROR)
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 class LLMHandler:
-    def __init__(self, model_path="models/mistral-7b-instruct-v0.2.Q6_K.gguf"):
+    def __init__(self, model_path="models/LLM/mistral-7b-instruct-v0.2.Q6_K.gguf"):
         if not os.path.exists(model_path):
             raise FileNotFoundError(f"Model file not found at {model_path}")
 
