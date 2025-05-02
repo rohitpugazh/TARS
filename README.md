@@ -39,10 +39,11 @@ pip install -r requirements.txt
 4. Download required models:
    - Mistral-7B Model:
      - Download `mistral-7b-instruct-v0.2.Q6_K.gguf` from [TheBloke's HuggingFace](https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.2-GGUF)
-     - Place it in the `models` directory
+     - Place it in the `models/LLM` directory
    - TTS Model:
-     - Option 1: Use the pre-trained XTTS2 model
-     - Option 2: Fine-tune your own model using [AllTalk](https://github.com/erew123/alltalk_tts)
+     - Download the XTTS2 model files
+     - Place `model.pth` in the `models/TTS` directory
+     - The `config.json` and training audio files are included in the repository
    - Reference Audio:
      - Place your reference audio file (e.g., reference.wav) in the project root
      - This should be a clear, high-quality recording of the voice you want to clone
@@ -63,8 +64,9 @@ python main.py
 ```
 TARS/
 ├── models/              # Model files
-│   ├── mistral-7b-instruct-v0.2.Q6_K.gguf  # LLM model
-│   └── TARS/           # TTS model files
+│   ├── LLM/            # Large Language Models
+│   │   └── mistral-7b-instruct-v0.2.Q6_K.gguf  # LLM model
+│   └── TTS/            # Text-to-Speech models
 │       ├── config.json # TTS model config
 │       ├── model.pth   # TTS model weights
 │       └── wavs/       # Training audio files
