@@ -11,6 +11,7 @@ A TARS-inspired conversational AI assistant that processes voice input, generate
 - Sarcasm toggle for TARS's personality
 
 ## Requirements
+- Windows 10/11
 - Python 3.11.9 or higher
 - CUDA-capable GPU (recommended)
 - Required packages (see requirements.txt)
@@ -25,10 +26,7 @@ cd TARS
 2. Create and activate a virtual environment:
 ```bash
 python -m venv venv
-# On Windows
 .\venv\Scripts\activate
-# On Linux/Mac
-source venv/bin/activate
 ```
 
 3. Install dependencies:
@@ -48,6 +46,35 @@ pip install -r requirements.txt
      - Place your reference audio file (e.g., reference.wav) in the project root
      - This should be a clear, high-quality recording of the voice you want to clone
 
+## Model Details
+
+### Text-to-Speech Model
+The TTS model has been fine-tuned to match TARS's voice from the Interstellar movie:
+
+1. **Base Model**: XTTS2 (Coqui TTS)
+2. **Training Data**:
+   - High-quality audio clips from Interstellar movie
+   - Cleaned and processed for optimal voice cloning
+   - Located in `models/TTS/wavs/`
+3. **Fine-tuning Process**:
+   - Audio clips segmented into 6-30 second chunks
+   - Background noise and music removed
+   - Normalized for consistent volume levels
+   - Fine-tuned using Coqui TTS training pipeline
+4. **Voice Characteristics**:
+   - Deep, authoritative tone
+   - Clear pronunciation
+   - Natural pacing and inflection
+   - Emotional range for sarcasm and humor
+
+### Language Model
+The Mistral-7B model is used with specific configurations:
+- Context window: 8192 tokens
+- Batch size: 512 tokens
+- GPU acceleration enabled
+- Custom system prompt for TARS personality
+- Temperature: 0.7 for balanced creativity
+
 ## Usage
 1. Run the main script:
 ```bash
@@ -56,7 +83,7 @@ python main.py
 
 2. Wait for TARS to initialize (you'll see "TARS initialized. Humor: 90%, Honesty: 90%")
 
-3. Speak when prompted or use the wake word to start a conversation
+3. Speak when prompted or use the wake word "Hey TARS" to start a conversation
 
 4. Press Ctrl+C to exit the conversation
 
