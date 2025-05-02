@@ -9,7 +9,16 @@ venv/
 env/
 
 # Models and Audio
+models/
+models/*
 !models/.gitkeep
+!models/README.md
+!models/LLM/
+!models/LLM/.gitkeep
+!models/TTS/
+!models/TTS/.gitkeep
+!models/Voice/
+!models/Voice/.gitkeep
 *.wav
 *.mp3
 *.pth
