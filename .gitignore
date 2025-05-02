@@ -9,8 +9,6 @@ venv/
 env/
 
 # Models and Audio
-models/
-models/*
 !models/.gitkeep
 *.wav
 *.mp3
