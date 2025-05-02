@@ -6,7 +6,6 @@ This directory is used to store various model files required for the TARS system
 
 - **TTS Models**: Text-to-Speech model files (`.pth`, `.pt`, or `.ckpt` files)
 - **LLM Models**: Large Language Model files (`.gguf` files)
-- **Voice Models**: Voice model files (`.bin`, `.onnx`, or `.safetensors` files)
 
 ## Directory Structure
 
@@ -14,11 +13,10 @@ This directory is used to store various model files required for the TARS system
 models/
 ├── LLM/              # Large Language Models
 │   └── mistral-7b-instruct-v0.2.Q6_K.gguf  # Mistral model for text generation
-├── TTS/              # Text-to-Speech models
-│   ├── config.json   # TTS model configuration (included in repo)
-│   ├── model.pth     # TTS model weights (needs to be downloaded)
-│   └── wavs/         # Training audio files (included in repo)
-└── Voice/            # Voice models
+└── TTS/              # Text-to-Speech models
+    ├── config.json   # TTS model configuration (included in repo)
+    ├── model.pth     # TTS model weights (needs to be downloaded)
+    └── wavs/         # Training audio files (included in repo)
 ```
 
 ## Model Details
@@ -41,7 +39,6 @@ models/
 ## Notes
 
 - Most model files are gitignored to prevent large files from being tracked
-- The `models/TARS` directory and its configuration files are included in the repository
 - Keep your model files organized in their respective subdirectories
 - Make sure to download and place the required model files before running the system
 - Model files are not included in the repository due to their size and licensing restrictions
